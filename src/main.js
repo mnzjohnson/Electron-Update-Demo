@@ -56,9 +56,9 @@ autoUpdater.on('update-downloaded', () => {
 ipcMain.on('restart_app', () => {
   setImmediate(() => {
     app.removeAllListeners("window-all-closed")
-    if (focusedWindow != null) {
-      focusedWindow.close()
-    }
+    // if (focusedWindow != null) {
+    //   focusedWindow.close()
+    // }
     autoUpdater.quitAndInstall(false)
   })
 });
