@@ -5,9 +5,11 @@
   "main": "src/main.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build2": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder build --mac --publish never",
+    "deploy": "electron-builder build --mac --publish always"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -43,5 +45,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/mnzjohnson/Electron-Update-Demo.git"
+  }
 }
