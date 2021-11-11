@@ -54,5 +54,11 @@ autoUpdater.on('update-downloaded', () => {
   mainWindow.webContents.send('update_downloaded');
 });
 ipcMain.on('restart_app', () => {
-  autoUpdater.quitAndInstall();
+  setImmediate(() => {
+    app.removeAllListeners("window-all-closed")
+    if (focusedWindow != null) {
+      focusedWindow.close()
+    }
+    autoUpdater.quitAndInstall(false)
+  })
 });
