@@ -55,6 +55,7 @@
       notification.classList.add("hidden");
     }
     function restartApp() {
+      console.log("you clicked restart")
       ipcRenderer.send("restart_app");
     }
   </script>

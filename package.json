@@ -8,8 +8,8 @@
     "build2": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "electron .",
-    "build": "electron-builder build --mac --publish never",
-    "deploy": "electron-builder build --mac --publish always"
+    "build": "electron-builder build --mac --win --publish never",
+    "deploy": "electron-builder build --mac --win --publish always"
   },
   "dependencies": {
     "core-js": "^3.6.5",
